@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundación Banco de Bosques</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <header class="encabezado">
+    <div class="encabezado__logotipo">Banco de Bosques</div>
+    <nav class="navegacion">
+      <a href="#inicio" class="navegacion__enlace">Inicio</a>
+      <a href="#proyectos" class="navegacion__enlace">Proyectos</a>
+      <a href="#nosotros" class="navegacion__enlace">Nosotros</a>
+      <a href="#documentacion" class="navegacion__enlace navegacion__enlace--destacado">Sistema de Diseño</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor-principal">
+
+    <!-- HERO / PORTADA -->
+    <section id="inicio" class="hero">
+      <h1 class="hero__titulo">Salvemos los bosques nativos de Argentina</h1>
+      <p class="hero__bajada">Compramos hectáreas amenazadas para donarlas al sistema de Parques Nacionales. Cada metro cuenta.</p>
+      <a href="#proyectos" class="botom botom--principal">Ver propiedades en riesgo</a>
+    </section>
+
+    <!-- SECCIÓN 1: PROYECTOS EN RIESGO -->
+    <section id="proyectos" class="seccion">
+      <h2 class="seccion__titulo">Propiedades en Riesgo Actual</h2>
+      <div class="grilla-tarjetas">
+        <article class="tarjeta-bosque">
+          <div class="tarjeta-bosque__imagen">Bosque Misionero</div>
+          <div class="tarjeta-bosque__contenido">
+            <h3 class="tarjeta-bosque__titulo">Selva Paranaense - Lote 4</h3>
+            <p class="tarjeta-bosque__texto">Último corredor biológico amenazado por el avance de la tala indiscriminada.</p>
+            <button class="botom botom--accion">Donar Metros Cuadrados</button>
+          </div>
+        </article>
+
+        <article class="tarjeta-bosque">
+          <div class="tarjeta-bosque__imagen">Chaco Seco</div>
+          <div class="tarjeta-bosque__contenido">
+            <h3 class="tarjeta-bosque__titulo">Impenetrable Chaqueño</h3>
+            <p class="tarjeta-bosque__texto">Hábitat prioritario del yaguareté. Necesitamos salvar 500 hectáreas urgentes.</p>
+            <button class="botom botom--accion">Donar Metros Cuadrados</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: SOBRE LA ORGANIZACIÓN -->
+    <section id="nosotros" class="seccion">
+      <h2 class="seccion__titulo">Cómo Funciona el Banco de Bosques</h2>
+      <p class="seccion__texto">Detectamos campos privados con bosques nativos en venta, recaudamos fondos mediante donaciones directas y los compramos para entregarlos al Estado como Parques Nacionales inalienables.</p>
+    </section>
+
+    <!-- SECCIÓN 3.1: DOCUMENTACIÓN INTEGRADA DEL SISTEMA -->
+    <section id="documentacion" class="documentacion">
+      <h2 class="documentacion__titulo">Documentación del Sistema de Diseño</h2>
+
+      <article class="documentacion__bloque">
+        <h3>1. Sobre el caso</h3>
+        <p><strong>Organización:</strong> Fundación Banco de Bosques.</p>
+        <p><strong>Público:</strong> Donantes individuales, activistas ambientales y empresas socias.</p>
+        <p><strong>Objetivo web:</strong> Visibilizar las tierras amenazadas y convertir visitas en metros cuadrados salvados.</p>
+      </article>
+
+      <article class="documentacion__bloque">
+        <h3>2. Variables del Sistema (CSS Custom Properties)</h3>
+        <p>Definición semántica de variables en <code>:root</code>:</p>
+        <ul>
+          <li><code>--color-primario</code> (#2D5A27): Identidad verde institucional.</li>
+          <li><code>--color-accion</code> (#D97706): Botones de interacción y donación.</li>
+          <li><code>--color-fondo</code> (#F4F7F4): Fondo de lectura limpio.</li>
+          <li><code>--color-texto</code> (#1F2937): Color neutro de alta legibilidad.</li>
+          <li><code>--color-superficie</code> (#FFFFFF): Tarjetas y contenedores.</li>
+        </ul>
+      </article>
+
+      <article class="documentacion__bloque">
+        <h3>3. Inventario de Componentes</h3>
+        <ul>
+          <li><strong>Átomos:</strong> <code>.botom</code>, <code>.navegacion__enlace</code>.</li>
+          <li><strong>Moléculas:</strong> <code>.tarjeta-bosque</code>.</li>
+          <li><strong>Organismos:</strong> <code>.encabezado</code>, <code>.hero</code>, <code>.documentacion</code>.</li>
+        </ul>
+      </article>
+
+      <article class="documentacion__bloque">
+        <h3>4. Decisiones Técnicas</h3>
+        <p>La estructura macro de la página utiliza <strong>CSS Grid</strong> para organizar el header, las secciones de contenido y el panel de documentación. Las alineaciones internas se resolvieron con Flexbox.</p>
+        <p>El componente <code>.tarjeta-bosque</code> implementa <strong>Container Queries</strong> (<code>container-type: inline-size</code>) para ajustar el texto y la imagen según el espacio de su contenedor y no según la pantalla.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie-pagina">
+    <p>© 2026 Fundación Banco de Bosques - Trabajo Práctico de Diseño Multimedial (UNLP)</p>
+  </footer>
+
+</body>
+</html>

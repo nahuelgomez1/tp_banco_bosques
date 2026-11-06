@@ -1,0 +1,157 @@
+/* ==========================================
+   1. VARIABLES DE DISEÑO (ETAPA 2.1)
+   ========================================== */
+:root {
+  --color-primario: #2D5A27;
+  --color-accion: #D97706;
+  --color-fondo: #F4F7F4;
+  --color-superficie: #FFFFFF;
+  --color-texto: #1F2937;
+  --color-borde: #E5E7EB;
+
+  --tipo-display: 2.25rem;
+  --tipo-grande: 1.5rem;
+  --tipo-base: 1rem;
+  --tipo-pequeno: 0.875rem;
+
+  --espacio-xs: 0.5rem;
+  --espacio-sm: 1rem;
+  --espacio-md: 2rem;
+  --espacio-lg: 4rem;
+}
+
+/* ==========================================
+   2. REINICIO Y ESTILOS BASE
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-size: var(--tipo-base);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   3. ESTRUCTURA MACRO CON CSS GRID (ETAPA 2.3)
+   ========================================== */
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-lg);
+  padding: var(--espacio-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   4. ORGANISMOS Y COMPONENTES
+   ========================================== */
+.encabezado {
+  background-color: var(--color-primario);
+  color: var(--color-superficie);
+  padding: var(--espacio-sm) var(--espacio-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.encabezado__logotipo {
+  font-size: var(--tipo-grande);
+  font-weight: bold;
+}
+
+.navegacion__enlace {
+  color: var(--color-superficie);
+  text-decoration: none;
+  margin-left: var(--espacio-sm);
+  font-size: var(--tipo-pequeno);
+}
+
+.hero {
+  background-color: var(--color-superficie);
+  padding: var(--espacio-lg);
+  border-radius: 8px;
+  border-left: 6px solid var(--color-primario);
+}
+
+.hero__titulo {
+  font-size: var(--tipo-display);
+  margin-bottom: var(--espacio-sm);
+}
+
+.botom {
+  display: inline-block;
+  padding: var(--espacio-xs) var(--espacio-sm);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.botom--principal, .botom--accion {
+  background-color: var(--color-accion);
+  color: var(--color-superficie);
+}
+
+.grilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--espacio-md);
+}
+
+/* ==========================================
+   5. CONTAINER QUERY EN COMPONENTE (ETAPA 3)
+   ========================================== */
+.tarjeta-bosque {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: var(--espacio-sm);
+  container-type: inline-size;
+}
+
+.tarjeta-bosque__imagen {
+  background-color: var(--color-primario);
+  color: white;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: var(--espacio-sm);
+}
+
+@container (min-width: 350px) {
+  .tarjeta-bosque__contenido {
+    display: grid;
+    gap: var(--espacio-xs);
+  }
+}
+
+/* ==========================================
+   6. DOCUMENTACIÓN INTEGRADA
+   ========================================== */
+.documentacion {
+  background-color: var(--color-superficie);
+  padding: var(--espacio-md);
+  border-top: 4px solid var(--color-primario);
+  border-radius: 8px;
+}
+
+.documentacion__bloque {
+  margin-top: var(--espacio-sm);
+}
+
+.pie-pagina {
+  text-align: center;
+  padding: var(--espacio-md);
+  font-size: var(--tipo-pequeno);
+}
