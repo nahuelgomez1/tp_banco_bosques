@@ -1,6 +1,6 @@
 # Trabajo Práctico Final: Sistema de Diseño y Sitio Web
 **Estudiante:** Nahuel Agustín Gomez  
-**Materia:** Seminario de Diseño Multimedial - Facultad de Artes (UNLP)  
+**Materia:** Arquitectura de interfaces - Facultad de Artes (UNLP)  
 **Proyecto:** Fundación Banco de Bosques  
 
 ## Descripción del Caso
